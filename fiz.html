@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- https://radioprog.ru/post/74
+Все функции и ассеты определяются \так
+
+Функции выделяются $$---$$ или \(---\)
+
+Буквы греческого алфабита зависят от регистра первой буквы
+
+frac{}{}			-	деление
+left / right		-	ставить перед скобкой для масштабирования
+lt / gt / le / ge	-	<	>	≤	≥
+cup / cap		-	∪	∩
+approx			-	≈
+vec				-	вектор
+overline			-	надчекривание
+not				-	зачеркивание
+lim[]				-	лимит
+ne				-	не равно
+pm				-	плюс-минус
+in					-	принадлежит
+int					-	интеграл
+over				-	горизонтальное деление
+sqrt[]{}			-	квадратный корень
+_{}				-	индекс
+^{}				-	степень
+ -->	
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ratmir's fiz</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+th,td{padding:4px;background-color:white}
+table{width:98%;margin:1%;background-color:black}
+caption{border:solid 2px;margin:2px 0;border-radius:99px 99px 0 0}
+#found .MathJax_Display{display:inline !important;padding:0.8em;margin:4px}
+#found{text-align:center;border:solid 2px #a69;border-radius:8px;margin:8px;padding: 8px}
+#symbols{text-align:center;border:solid 2px #8af;border-radius:8px;margin:16px;padding: 8px}
+#aim{text-align:center;color:#aaa;font-size:0.8em}
+</style>
+<script id ="mjx" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript">
+function find(poc){
+rep_form = document.getElementById('formulaz');
+found = document.getElementById('found');
+found.innerHTML = '';
+var arr = (rep_form.textContent||rep_form.innerText).split(/\n/);
+for(let i=0;i<arr.length;i++) if(arr[i].includes(poc)) found.append('$$'+arr[i]+'$$ ');
+MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+}
+</script>
+</head>
+<body>
+<div id="symbols">
+<button onclick="find('=')">Все формулы</button>
+<button onclick="find('U')">U</button>
+<button onclick="find('I')">I</button>
+<button onclick="find('Q')">Q</button>
+</div>
+<div id="found"></div>
+<div id="formulaz" hidden="true">
+I=\frac{q}{t}
+I=\frac{\xi}{R+r}
+I=\frac{U}{R}
+U=\frac{P}{I}
+U=\frac{A}{q}
+R=\rho\frac{l}{S}
+\xi=\frac{A_{внешняя}}{q}
+A=UIt
+Q=I^{2}Rt
+</div>
+<p id="aim">Эту страничку сделал Ратмир Мирошниченко, а потому он (я) может спокойно использовать её в качестве конспекта.</p>
+</body>
+</html>

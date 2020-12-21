@@ -1,12 +1,12 @@
 {
 "formulas":[
   "I=\frac{q}{t}",
-  "I=\frac{\\xi}{R+r}",
+  "I=\frac{\xi}{R+r}",
   "I=\frac{U}{R}",
   "U=\frac{P}{I}",
   "U=\frac{A}{q}",
   "R=\rho\frac{l}{S}",
-  "\\xi=\frac{A_{внешняя}}{q}",
+  "\xi=\frac{A_{внешняя}}{q}",
   "A=UIt",
   "Q=I^{2}Rt"
 ],

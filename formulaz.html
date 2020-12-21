@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+#formulaz_result .MathJax_Display{
+	display:inline !important;
+	padding:0.8em;
+	margin:4px;
+}
+#formulaz_result{
+	text-align:center;
+	border:solid 2px #a69;
+	border-radius:8px;
+	margin:8px;
+	padding:8px;
+	background-color:#ece;
+}
+#search_buttons{
+	text-align:center;
+	border:solid 2px #6a9;
+	border-radius:8px;
+	margin:16px;
+	padding:8px;
+	background-color:#cee;
+}
+#az_is_me{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	text-align:center;
+	color:#aaa;
+	font-size:0.8em;
+}
+</style>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript">
+function find(charclude){
+	rep_form = document.getElementById('formulaz_data');
+	var arr = (rep_form.textContent || rep_form.innerText).split(/\n+/);
+
+	found = document.getElementById('formulaz_result');
+	found.innerHTML = '';
+
+	found.append('Результаты поиска формул с совпадениями \"'+charclude+'\":');
+	found.append(document.createElement('br'));
+	found.append(document.createElement('br'));
+	for(let i = 0; i < arr.length; i++)
+	if(arr[i].includes(charclude))
+	found.append('$$' + arr[i] + '$$ ');
+
+	MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+}
+
+function load_data(file_name){
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', 'https://raw.githubusercontent.com/AZsSPC/formulaz/main/'+file_name+'.faz', true);
+	xhr.send();
+
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState != 4) return;
+		var ret_data = (xhr.responseText).split(/\n*azdatasplit\n*/);
+		document.getElementById('formulaz_data').innerHTML = ret_data[0];
+		sb = document.getElementById('search_buttons');
+		sb.innerHTML = '';
+		
+		var butts = ret_data[1].split(/\n+/);
+		for(let i = 0; i < butts.length; i++){
+			if(butts[i].length<3) continue;
+			var bd = butts[i].split(/§+/);
+			b = document.createElement('button');
+			b.innerHTML =bd[0];
+			b.setAttribute('onclick','find(\''+bd[1]+'\');');
+			sb.append(b);
+			sb.append(' ');
+		}
+	}
+}
+
+load_data('physic');
+</script>
+
+<title>Formulaz!</title>
+</head>
+<body>
+<div id="search_buttons">Если ты это видишь - произошла ошибка!<br>Попробуй открыть это в другом браузере.</div>
+<div id="formulaz_result">Просто нажми на кнопочку</div>
+<div id="formulaz_data" hidden="true"></div>
+<p id="az_is_me">Эту страничку сделал Ратмир Мирошниченко, а потому он (я) может спокойно использовать её в качестве конспекта.</p>
+</body>
+</html>

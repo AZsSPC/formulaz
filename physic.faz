@@ -16,10 +16,10 @@ Q=I^2Rt
 B=\frac{F_{A max}}{Il}
 Ф=BS\cos\alpha
 F_A=BIl\sin\alpha
-F_Л=qBv\sin\alpha
-\xi=-N\frac{\vardeltaФ}{\vardeltat}
+F_Л=qB\upsilon\sin\alpha
+\xi=-N\frac{\Delta Ф}{\Delta t}
 L=\frac{Ф}{I}
-\xi=-L\frac{\vardeltaI}{\vardeltat}
+\xi=-L\frac{\Delta I}{\Delta t}
 W_M=\frac{LI^2}{2}
 T=\frac{t}{N}=\frac{1}{\nu}
 \omega=\frac{2\pi}{T}=2\pi\nu
@@ -28,16 +28,16 @@ W=\frac{q^2}{2C}+\frac{Li^2}{2}
 k=\frac{N_1}{N_2}
 \eta=\frac{U_2I_2}{U_1I_1}*100%
 c=\lambda\nu
-w=\frac{\upsilon_0\upsilonE^2}{2}+\frac{B^2}{2\mu_0\mu}
+w=\frac{\varepsilon_0\varepsilonE^2}{2}+\frac{B^2}{2\mu_0\mu}
 n_{2 1}=\frac{\sin\alpha}{\sin\gamma}=\frac{v_1}{v_2}
 \frac{1}{F}=\frac{1}{d}+\frac{1}{f}
 D=\frac{1}{F}
-\vardeltad=k\frac{\lambda}{2}
-d\sin\phi=k\lambda
+\Delta d=k\frac{\lambda}{2}
+d\sin\varphi=k\lambda
 E=h\nu
 h\nu=A_{вих}+E_{k max}
-\vardeltam=(Zm_p+Nm_n)-m_я
-E_{зв}=k\Deltam
+\Delta m=(Zm_p+Nm_n)-m_я
+E_{зв}=k\Delta m
 f=\frac{E_{зв}}{A}
 
 azdatasplit

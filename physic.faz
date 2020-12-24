@@ -2,6 +2,43 @@ I=\frac{q}{t}
 U=\frac{A}{q}
 R=\rho\frac{l}{S}
 \xi=\frac{A}{q}
+I=\frac{U}{R}
+I=\frac{\xi}{R+r}
+I=I_1=I_2=...=I_n
+U=U_1+U_2+...+U_n
+R=R_1+R_2+...+R_n
+I=I_1+I_2+...+I_n
+U=U_1=U_2=...=U_n
+\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+...+\frac{1}{R_n}
+A=UIt
+P=UIt
+Q=I^2Rt
+B=\frac{F_{A max}}{Il}
+Ф=BS\cos\alpha
+F_A=BIl\sin\alpha
+F_Л=qBv\sin\alpha
+\xi=-N\frac{\vardeltaФ}{\vardeltat}
+L=\frac{Ф}{I}
+\xi=-L\frac{\vardeltaI}{\vardeltat}
+W_M=\frac{LI^2}{2}
+T=\frac{t}{N}=\frac{1}{\nu}
+\omega=\frac{2\pi}{T}=2\pi\nu
+T=2\pi\sqrt{LC}
+W=\frac{q^2}{2C}+\frac{Li^2}{2}
+k=\frac{N_1}{N_2}
+\eta=\frac{U_2I_2}{U_1I_1}*100%
+c=\lambda\nu
+w=\frac{\upsilon_0\upsilonE^2}{2}+\frac{B^2}{2\mu_0\mu}
+n_{2 1}=\frac{\sin\alpha}{\sin\gamma}=\frac{v_1}{v_2}
+\frac{1}{F}=\frac{1}{d}+\frac{1}{f}
+D=\frac{1}{F}
+\vardeltad=k\frac{\lambda}{2}
+d\sin\phi=k\lambda
+E=h\nu
+h\nu=A_{вих}+E_{k max}
+\vardeltam=(Zm_p+Nm_n)-m_я
+E_{зв}=k\Deltam
+f=\frac{E_{зв}}{A}
 
 azdatasplit
 

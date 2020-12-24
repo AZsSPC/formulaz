@@ -1,4 +1,4 @@
-=Единицы измерения=§Тут будет описание всех ЕИ используемых в данном разделе. В конкретных формулах будут уточнения.§
+=Единицы\ измерения=§Тут будет описание всех ЕИ используемых в данном разделе. В конкретных формулах будут уточнения.§
 I=\frac{q}{t}
 U=\frac{A}{q}
 R=\rho\frac{l}{S}
@@ -14,7 +14,7 @@ U=U_1=U_2=...=U_n
 A=UIt
 P=UIt
 Q=I^2Rt
-B=\frac{F_{A max}}{Il}
+B=\frac{F_{A\ max}}{Il}
 Ф=BS\cos\alpha
 F_A=BIl\sin\alpha
 F_Л=qB\upsilon\sin\alpha
@@ -36,14 +36,15 @@ D=\frac{1}{F}
 \Delta d=k\frac{\lambda}{2}
 d\sin\varphi=k\lambda
 E=h\nu
-h\nu=A_{вих}+E_{k max}
+h\nu=A_{вих}+E_{k\ max}
 \Delta m=(Zm_p+Nm_n)-m_я
 E_{зв}=k\Delta m
 f=\frac{E_{зв}}{A}
 
 azdatasplit
 
+?§ЕИ
 Все формулы§=
 U§U
 I§I
-ЕРС§\xi
+ЕДС§\xi

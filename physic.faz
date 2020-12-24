@@ -1,3 +1,4 @@
+=Единицы измерения=§Тут будет описание всех ЕИ используемых в данном разделе. В конкретных формулах будут уточнения.§
 I=\frac{q}{t}
 U=\frac{A}{q}
 R=\rho\frac{l}{S}
@@ -28,7 +29,7 @@ W=\frac{q^2}{2C}+\frac{Li^2}{2}
 k=\frac{N_1}{N_2}
 \eta=\frac{U_2I_2}{U_1I_1}*100%
 c=\lambda\nu
-w=\frac{\varepsilon_0\varepsilonE^2}{2}+\frac{B^2}{2\mu_0\mu}
+w=\frac{\varepsilon_0\varepsilon E^2}{2}+\frac{B^2}{2\mu_0\mu}
 n_{2 1}=\frac{\sin\alpha}{\sin\gamma}=\frac{v_1}{v_2}
 \frac{1}{F}=\frac{1}{d}+\frac{1}{f}
 D=\frac{1}{F}

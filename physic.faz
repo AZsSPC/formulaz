@@ -40,6 +40,24 @@ h\nu=A_{вих}+E_{k\ max}
 \Delta m=(Zm_p+Nm_n)-m_я
 E_{зв}=k\Delta m
 f=\frac{E_{зв}}{A}
+p=\frac{F}{S}
+p=\rho g h
+\frac{h_1}{h_2}=\frac{\rho_2}{\rho_1}
+F_A=\rho_Ж\V_П\g
+\vec F*\Delta t=\Delta\vec p
+A=F*S*\sin\alpha
+N=\frac{A}{\Delta t}
+\eta=\frac{A}{W}
+W_k=\frac{m\nu^2}{2}
+W_p=mgh
+\varepsilon=h\nu=\frac{h\c}{\lambda}
+\varepsilon=mc^2
+m=\frac{\varepsilon}{c^2}=\frac{h\nu}{c}=\frac{hc}{c^2\lambda}=\frac{h}{c\lambda}
+p=mc=\frac{h\nu}{c}=\frac{h}{\lambda}
+h\nu_0=\frac{hc}{\lambda_0}=A+0
+\nu_0=\frac{A}{h}
+\lambda_0=\frac{hc}{A}
+h\nu=A+eU_3
 
 azdatasplit
 

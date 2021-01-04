@@ -7,9 +7,60 @@ x = x_{0} + v_{x} t
 \vec{s} = \frac{\vec{v} + \vec{v_{0}}}{2} t
 \vec{s} = \vec{v_{0}} t + \frac{\vec{a} t^{2}}{2}
 s_{x} = \frac{v^{2}_{x} - v^{2}_{0 x}}{2 a_{x}}
-x = x_{0} +  v_{0} t + \frac{a t^{2}}{2}
+x = x_{0} + v_{0} t + \frac{a t^{2}}{2}
+
+\nu = \frac{N}{t}
+T = \frac{t}{N}
+T = \frac{1}{\nu}
+v = \frac{s}{t}
+v = \frac{2 \pi r}{T}
+v = 2 \pi r \nu
+\omega = \frac{\varphi}{t}
+\omega = \frac{2 \pi}{T}
+\omega = 2 \pi \nu
+v = \omega r
+a = \frac{v^{2}}{r}
+a = \omega^{2} r
+\vec{a} = \frac{\vec{F_{R}}}{m}
+\vec{F_{1}} = - \vec{F_{2}}
+F_{трения} = \mu N
+F_{упругости} = - k x
+\vec{F} = m \vec{g}
+\vec{P} = m \vec{g}
+\vec{P} = m \left( \vec{g} - \vec{a} \right)
+F = G \frac{m_{1} m_{2}}{r^{2}}
+g = G \frac{M}{\left( R + h \right)^{2}}
+\upsilon = \sqrt{G \frac{M}{R}}
+\frac{F} t = m \vec{v} - m \vec{v_{0}}
+m_{1} \vec{v_{1}} + m_{2} \vec{v_{2}} = m_{1} \vec{v_{1}} + m_{2} \vec{v_{2}}
+
+M = F d
+\sum^{n}_{i = 1} \vec{F_{i}} = \vec{0}
+\sum^{n}_{i = 1} M_{i} = 0
+
+\rho = \frac{m}{V}
+p = \frac{F}{S}
+p = \rho g h
+F_{давления} = \rho g H S
+F_{давления} = \frac{\rho g H S}{2}
+\frac{h_{1}}{h_{2}} = \frac{\rho_{2}}{\rho_{1}}
+F_{A} = \rho g V
+F_{2} = \frac{F_{1} S_{2}}{S_{1}}
+A = F s \cos{\alpha}
+A = - F_{трения} s
+A = m g \left( h_{1} - h_{2} \right)
+A = \frac{k \left( x^{2}_{1} - x^{2}_{2} \right)}{2}
+N = F v
+N = \frac{A}{t}
+E_{кин.} = \frac{m v^{2}}{2}
+E_{пот.} = m g h
+E_{пот.} = \frac{k x^{2}}{2}
+E = E_{кин.} + E_{пот.}
+A = \frac{m \left( v^{2}_{2} - v^{2}_{1} \right)}{2}
+\eta = \frac{A_{n}}{A} = \frac{N_{n}}{N}
+
+
 
 azdatasplit
 
 Все формулы§=
-az§https://down.ctege.info/ege/obshee/fizika/fizika-formuly-ege.pdf?ddexp4attempt=1

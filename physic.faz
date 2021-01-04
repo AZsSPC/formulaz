@@ -1,68 +1,14 @@
-=Единицы\ измерения=§Тут будет описание всех ЕИ используемых в данном разделе. В конкретных формулах будут уточнения.§
-I=\frac{q}{t}
-U=\frac{A}{q}
-R=\rho\frac{l}{S}
-\xi=\frac{A}{q}
-I=\frac{U}{R}
-I=\frac{\xi}{R+r}
-I=I_1=I_2=...=I_n
-U=U_1+U_2+...+U_n
-R=R_1+R_2+...+R_n
-I=I_1+I_2+...+I_n
-U=U_1=U_2=...=U_n
-\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+...+\frac{1}{R_n}
-A=UIt
-P=UIt
-Q=I^2Rt
-B=\frac{F_{A\ max}}{Il}
-Ф=BS\cos\alpha
-F_A=BIl\sin\alpha
-F_Л=qB\upsilon\sin\alpha
-\xi=-N\frac{\Delta Ф}{\Delta t}
-L=\frac{Ф}{I}
-\xi=-L\frac{\Delta I}{\Delta t}
-W_M=\frac{LI^2}{2}
-T=\frac{t}{N}=\frac{1}{\nu}
-\omega=\frac{2\pi}{T}=2\pi\nu
-T=2\pi\sqrt{LC}
-W=\frac{q^2}{2C}+\frac{Li^2}{2}
-k=\frac{N_1}{N_2}
-\eta=\frac{U_2I_2}{U_1I_1}*100%
-c=\lambda\nu
-w=\frac{\varepsilon_0\varepsilon E^2}{2}+\frac{B^2}{2\mu_0\mu}
-n_{2 1}=\frac{\sin\alpha}{\sin\gamma}=\frac{v_1}{v_2}
-\frac{1}{F}=\frac{1}{d}+\frac{1}{f}
-D=\frac{1}{F}
-\Delta d=k\frac{\lambda}{2}
-d\sin\varphi=k\lambda
-E=h\nu
-h\nu=A_{вих}+E_{k\ max}
-\Delta m=(Zm_p+Nm_n)-m_я
-E_{зв}=k\Delta m
-f=\frac{E_{зв}}{A}
-p=\frac{F}{S}
-p=\rho g h
-\frac{h_1}{h_2}=\frac{\rho_2}{\rho_1}
-F_A=\rho_Ж\V_П\g
-\vec F*\Delta t=\Delta\vec p
-A=F*S*\sin\alpha
-N=\frac{A}{\Delta t}
-\eta=\frac{A}{W}
-W_k=\frac{m\nu^2}{2}
-W_p=mgh
-\varepsilon=h\nu=\frac{h\c}{\lambda}
-\varepsilon=mc^2
-m=\frac{\varepsilon}{c^2}=\frac{h\nu}{c}=\frac{hc}{c^2\lambda}=\frac{h}{c\lambda}
-p=mc=\frac{h\nu}{c}=\frac{h}{\lambda}
-h\nu_0=\frac{hc}{\lambda_0}=A+0
-\nu_0=\frac{A}{h}
-\lambda_0=\frac{hc}{A}
-h\nu=A+eU_3
+s_{x} = x - x_{0}
+\vec{v} = \frac{\vec{s}}{t}
+v_{средн.} = \frac{s}{t}
+x = x_{0} + v_{x} t
+\vec{a} = \frac{\vec{v} - \vec{v_{0}}}{t}
+\vec{v} = \vec{v_{0}} + \vec{a} t
+\vec{s} = \frac{\vec{v} + \vec{v_{0}}}{2} t
+\vec{s} = \vec{v_{0}} t + \frac{\vec{a} t^{2}}{2}
+s_{x} = \frac{v^{2}_{x} - v^{2}_{0 x}}{2 a_{x}}
+x = x_{0} +  v_{0} t + \frac{a t^{2}}{2}
 
 azdatasplit
 
-?§ЕИ
 Все формулы§=
-U§U
-I§I
-ЕДС§\xi

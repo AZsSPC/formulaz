@@ -148,7 +148,7 @@
 
     function preload_sections() {
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://raw.githubusercontent.com/AZsSPC/formulaz/main/sections.afaz', true);
+        xhr.open('GET', 'https://raw.githubusercontent.com/AZsSPC/formulaz/main/sections.faz', true);
         xhr.send();
         formulaz_section_b.innerHTML = '';
         xhr.onreadystatechange = function () {
@@ -158,8 +158,8 @@
                 if (ret_data[i].length < 6) continue;
                 let bd = ret_data[i].split(/§+/);
                 let button = document.createElement('button');
-                button.setAttribute('onclick', 'set_section(\'' + bd[0] + '\')');
-                button.innerHTML = bd[1];
+                button.innerHTML = bd[0];
+                button.setAttribute('onclick', 'set_section(\'' + bd[1] + '\')');
                 formulaz_section_b.append(button);
                 formulaz_section_b.append(' ');
             }

@@ -12,21 +12,20 @@ background:center no-repeat url("https://raw.githubusercontent.com/AZsSPC/formul
 }
 #f_r,#f_b{
 text-align:center;
-padding:8px;
-background-color:#f8d6d6;
-border-bottom:solid 1px #ba6363;
+background-color: #ffefef;
 }
 #f_b{
-background-color:#d9a3a3;
+padding:8px;
+background-color:#ba6363;
 }
 #f_d,.m_c>.m_f{
 display:none;
 }
 .m_c,.m_cb{
 display:inline-block;
-margin:2px;
-padding:0 8px;
-border:solid 2px #712a2a;
+margin:3px;
+padding:8px;
+border:solid 1px #ba6363;
 background-color:#fff;
 cursor:pointer;
 border-radius:8px;
@@ -49,15 +48,15 @@ margin-top:46px;
 }
 button{
 border-radius:8px;
-color:#000;
+color:#ba6363;
 background-color:#fff;
-border:2px solid #000;
+border:1px solid #ba6363;
 cursor:pointer;
 }
 button:hover{
 color:#fff;
-background-color:#000;
-border:2px solid #fff;
+background-color:#ba6363;
+border:1px solid #fff;
 }
 </style>
 <script type="text/javascript"
@@ -118,7 +117,6 @@ button.setAttribute('onclick','find(\''+bd[1]+'\')');
 f_b.append(button);
 f_b.append(' ');
 }
-find('=');
 }
 }
 reload_data();

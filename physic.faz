@@ -147,7 +147,7 @@ u = U_{max} \sin \left( \omega t + \varphi_{0} \right)
 i = I_{max} \cos \left( \omega t + \varphi_{0} \right)
 I_{max} = \omega q_{max}
 T = 2 \pi \sqrt{L C}
-W = \frac{L i^2}
+W = \frac{L i^2}{2}
 \frac{q^2_{max}}{C} = \frac{q^2}{C} + \frac{L i^2}{2} = L I^2_{max}
 I = \frac{I_{max}}{\sqrt{2}}
 U = \frac{U_{max}}{\sqrt{2}}
@@ -165,15 +165,15 @@ D = \frac{1}{F}
 \Delta_{max} = k \lambda
 d \sin \varphi = k \lambda
 
-v = \frac{v_{1} + v_{2}}{1 + \frac{v_{1} v_{2}}{c^2}
-l = l_{0} \sqrt{1 - \frac{v^2}{c^2}
+v = \frac{v_{1} + v_{2}}{1 + \frac{v_{1} v_{2}}{c^2}}
+l = l_{0} \sqrt{1 - \frac{v^2}{c^2}}
 \tau = \frac{\tau_{0}}{\sqrt{1 - \frac{v^2}{c^2}}}
 m = \frac{m_{0}}{\sqrt{1 - \frac{v^2}{c^2}}}
 E = m c^2
 
 E = h \nu
 p = m c = \frac{h \nu}{c}
-h \nu = A + \frac{m \v^2}{2}
+h \nu = A + \frac{m v^2}{2}
 A = h \nu_{min} = \frac{h c}{\lambda}
 \frac{m v^2}{2} = e U
 h \nu = E_{n} - E_{m}

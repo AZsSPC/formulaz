@@ -80,7 +80,60 @@ p = n k T
 v = \sqrt{\frac{3 R T}{M}}
 p V = \frac{m R T}{M}
 
+U = \frac{i m R T}{2 M}
+Q = c m \left( t_{2} - t_{1} \right)
+C = c m
+Q_{n} = r m
+Q_{плавления} = \lambda m
+Q_{сгорания} = - q m
+A = p \delta V
+Q = \delta U + A
+\sum^{n}_{i = 1} Q_{i} = 0
+\eta = \frac{A}{Q_{1}} = \frac{Q_{1} - Q_{2}}{Q_{1}}
+\eta = \frac{T_{1} - T_{2}}{t_{1}}
 
+F = \frac{k \left| q_{1} \right| \cdot \left| q_{2} \right|}{\varepsilon r^{2}}
+k = \frac{1}{4 \pi \varepsilon_{0}}
+\vec{E} = \frac{\vec{F}}{q}
+E = \frac{k \cdot \left| q \right|}{\varepsilon r^{2}}
+E = \frac{k \cdot \left| q_{шара} \right|}{\varepsilon \left( R + r \right)^{2}}
+\vec{E} = \sum^{n}_{i = 1} \vec{E}_{i}
+\varphi = \frac{W_{пот.}}{q}
+\varphi = \frac{k q}{\varepsilon r}
+\varphi = \frac{k q_{шара}}{\varepsilon \left( R + r \right)}
+\varphi = E d
+\varphi = \sum^{n}{i = 1} \varphi_{i}
+A = q \left( \varphi_{1} - \varphi_{2} \right) = q U
+E = \frac{E}{d}
+C = \frac{q}{U}
+C = \frac{\varepsilon \varepsilon_{0} S}{d}
+C = \sum^{n}{i = 1} C_{i}
+\frac{1}{C} = \sum^{n}{i = 1} \frac{1}{C_{i}}
+W = \frac{q U}{2} = \frac{C U^{2}}{2} = \frac{q^{2}}{2 C}
+\sigma = \frac{q}{S}
+
+I = \frac{q}{t}
+I = q_{0} n v S
+j = \frac{I}{S}
+I = \frac{U}{R}
+R = \frac{\rho l}{S}
+R = R_{0} \left( 1 + \alpha t \right)
+R = \sum^{n}{i = 1} R_{i}
+\frac{1}{R} = \sum^{n}{i = 1} \frac{1}{R_{i}}
+A = I U t = I^{2} R t = \frac{U^{2} t}{R}
+P = \frac{A}{t} = I U = I^{2} R = \frac{U^{2}}{R}
+Q = I^{2} R t
+\mathcal{E} = \frac{A}{q}
+I = \frac{\mathcal{E}}{R + r}
+I = \frac{n \mathcal{E}}{R + r n}
+I = \frac{\mathcal{E}}{R + \frac{r}{n}}
+m = k I t
+
+\hat{A} = \frac{M_{max}}{I S} = \frac{F_{max}}{I \cdot \Delta l}
+F = I B \cdot \Delta l \sin \alpha
+F = \left| q \right| v B \sin \alpha
+m v = q B R
+Ф = B S \cos \alpha
 
 azdatasplit
 

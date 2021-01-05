@@ -1,171 +1,130 @@
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <style>
-        #formulaz_result, #search_buttons, #section_buttons {
-            text-align: center;
-            margin: 4px;
-            padding: 8px;
-            border-radius: 8px;
-        }
-
-        #section_buttons {
-            border: solid 2px #69a;
-            background-color: #cee;
-        }
-
-        #search_buttons {
-            border: solid 2px #879;
-            background-color: #dde;
-        }
-
-        #formulaz_result {
-            border: solid 2px #a69;
-            background-color: #ece;
-            margin-bottom: 150px;
-        }
-
-        #formulaz_data {
-            display: none;
-        }
-
-        .mjc {
-            border-radius: 8px;
-            display: inline-block;
-            margin: 4px;
-            border: solid 2px #615;
-            padding: 0 8px;
-            background-color: #fff;
-            cursor: pointer;
-        }
-
-        button {
-            border-radius: 8px;
-            color: #000;
-            background-color: #fff;
-            border: 2px solid #000;
-            cursor: pointer;
-        }
-
-        button:hover {
-            color: #fff;
-            background-color: #000;
-            border: 2px solid #fff;
-        }
-
-        #formulaz_info {
-            overflow: scroll;
-            background-color: #fff;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 140;
-            padding: 0 8px 0;
-            border: 2px solid #000;
-            margin: 0 2%;
-            border-radius: 12px 12px 0 0;
-        }
-
-    </style>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <title>Formulaz!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style>
+body {
+margin: 0;
+padding: 0
+}
+#fa_res, #fa_but {
+text-align: center;
+padding: 8px;
+}
+#fa_but {
+border-bottom: solid 2px #879;
+background-color: #aaf;
+}
+#fa_res {
+background-color: #ece;
+}
+#fa_data {
+display: none;
+}
+.mjc, .mjc-b {
+display: inline-block;
+margin: 2px;
+padding: 0 8px;
+border: solid 2px #615;
+background-color: #fff;
+cursor: pointer;
+border-radius: 8px;
+}
+.mjc-b {
+border-radius: 0;
+margin: 0;
+position: fixed;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+z-index: 999;
+padding: 36px;
+border: solid 16px #615;
+}
+.mjc > .mjcf {
+display: none;
+}
+.mjc-b > .mjcf {
+display: block !important;
+margin-top: 46px;
+}
+button {
+border-radius: 8px;
+color: #000;
+background-color: #fff;
+border: 2px solid #000;
+cursor: pointer;
+}
+button:hover {
+color: #fff;
+background-color: #000;
+border: 2px solid #fff;
+}
+</style>
+<script type="text/javascript"
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<title>Formulaz!</title>
 </head>
 <body>
-<div id="section_buttons"></div>
-<div id="search_buttons">Выбери раздел</div>
-<div id="formulaz_result" hidden=true></div>
-<div id="formulaz_data"></div>
-<div id="formulaz_info">
-</div>
+<div id="fa_but"></div>
+<div id="fa_res" hidden=true></div>
+<div id="fa_data"></div>
 </body>
 <script type="text/javascript">
-    let formulaz_data = document.getElementById('formulaz_data');
-    let formulaz_result = document.getElementById('formulaz_result');
-    let formulaz_search_b = document.getElementById('search_buttons');
-    let formulaz_section_b = document.getElementById('section_buttons');
-    let formulaz_info = document.getElementById('formulaz_info');
-
-    /**
-     * Ищет формулы в которых есть введенные символы
-     */
-    function find(charclude) {
-        let arr = (formulaz_data.textContent || formulaz_data.innerText).split(/\n+/);
-        formulaz_result.innerHTML = '';
-        formulaz_result.append('Результаты поиска формул с совпадениями \"' + charclude + '\"');
-        formulaz_result.append(document.createElement('br'));
-        for (let i = 0; i < arr.length; i++) if (arr[i].includes(charclude)) {
-            let mjs = document.createElement('span');
-            mjs.className = 'mjc';
-            mjs.append('$$' + arr[i].split(/§+/, 1) + '$$');
-
-            mjs.setAttribute('onclick', 'show_about_it(\'' + i + '\')');
-            let mmm = document.createElement('span');
-            mmm.innerText = arr[i];
-            mmm.hidden = true;
-            mmm.id = 'mmm-' + i;
-            mjs.append(mmm);
-            formulaz_result.append(mjs);
-        }
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-        formulaz_result.hidden = false;
-    }
-
-    function show_about_it(b_id) {
-        let data = document.getElementById('mmm-' + b_id).innerText;
-        formulaz_info.innerHTML = '<p>$$' + data.split(/§/, 1) + '$$</p>' + data.replace(/^[^§]+§+|§+/g, '<br>').replace(/^.br./,'');
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-    }
-
-    /**
-     * загружает формулы и кнопки выбранного раздела
-     * */
-    function set_section(file_name) {
-        formulaz_result.hidden = true;
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://raw.githubusercontent.com/AZsSPC/formulaz/main/' + file_name + '.faz', true);
-        xhr.send();
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState != 4) return;
-            let ret_data = (xhr.responseText).split(/\n*azdatasplit\n*/);
-            formulaz_data.innerHTML = ret_data[0];
-            formulaz_search_b.innerHTML = 'Данного раздела не существует';
-            let butts = ret_data[1].split(/\n+/);
-            formulaz_search_b.innerHTML = '';
-            for (let i = 0; i < butts.length; i++) {
-                if (butts[i].length < 3) continue;
-                let bd = butts[i].split(/§+/);
-                let button = document.createElement('button');
-                button.innerHTML = bd[0];
-                button.setAttribute('onclick', 'find(\'' + bd[1] + '\')');
-                formulaz_search_b.append(button);
-                formulaz_search_b.append(' ');
-            }
-            find('=');
-        }
-    }
-
-    function preload_sections() {
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://raw.githubusercontent.com/AZsSPC/formulaz/main/sections.faz', true);
-        xhr.send();
-        formulaz_section_b.innerHTML = '';
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState != 4) return;
-            let ret_data = (xhr.responseText).split(/\n+/);
-            for (let i = 0; i < ret_data.length; i++) {
-                if (ret_data[i].length < 6) continue;
-                let bd = ret_data[i].split(/§+/);
-                let button = document.createElement('button');
-                button.innerHTML = bd[0];
-                button.setAttribute('onclick', 'set_section(\'' + bd[1] + '\')');
-                formulaz_section_b.append(button);
-                formulaz_section_b.append(' ');
-            }
-        }
-    }
-
-    preload_sections();
+let fa_data = document.getElementById('fa_data');
+let fa_res = document.getElementById('fa_res');
+let fa_but = document.getElementById('fa_but');
+function find(charclude) {
+let arr = (fa_data.textContent || fa_data.innerText).split(/\n+/);
+fa_res.innerHTML = '';
+for (let i = 0; i < arr.length; i++) if (arr[i].includes(charclude)) {
+var innerMJ = arr[i].split(/==+/, 2);
+let mjc = document.createElement('span');
+mjc.className = 'mjc';
+mjc.id = 'mjc-' + i;
+mjc.setAttribute('onclick', 'smaz(' + i + ')');
+let mjch = document.createElement('span');
+mjch.className = 'mjch';
+mjch.innerHTML = '$$' + innerMJ[0] + '$$';
+let mjcf = document.createElement('span');
+mjcf.className = 'mjcf';
+mjcf.innerHTML = '$$' + innerMJ[1] + '$$';
+mjc.append(mjch);
+mjc.append(mjcf);
+fa_res.append(mjc);
+}
+MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+fa_res.hidden = false;
+}
+function smaz(mjcf_id) {
+let data = document.getElementById('mjc-' + mjcf_id);
+data.className = (data.className === 'mjc' ? 'mjc-b' : 'mjc');
+}
+function reload_data() {
+fa_res.hidden = true;
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://raw.githubusercontent.com/AZsSPC/formulaz/main/physic.faz', true);
+xhr.send();
+xhr.onreadystatechange = function () {
+if (xhr.readyState != 4) return;
+let ret_data = (xhr.responseText).split(/\n*azdatasplit\n*/);
+fa_data.innerHTML = ret_data[0];
+fa_but.innerHTML = 'Данного раздела не существует';
+let butts = ret_data[1].split(/\n+/);
+fa_but.innerHTML = '';
+for (let i = 0; i < butts.length; i++) {
+if (butts[i].length < 3) continue;
+let bd = butts[i].split(/==+/);
+let button = document.createElement('button');
+button.innerHTML = bd[0];
+button.setAttribute('onclick', 'find(\'' + bd[1] + '\')');
+fa_but.append(button);
+fa_but.append(' ');
+}
+find('=');
+}
+}
+reload_data();
 </script>
 </html>

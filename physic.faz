@@ -41,8 +41,8 @@ M = F d
 \rho = \frac{m}{V}
 p = \frac{F}{S}
 p = \rho g h
-F_{давления} = \rho g H S
-F_{давления} = \frac{\rho g H S}{2}
+F_{давления \ дно} = \rho g H S
+F_{давления \ бок} = \frac{\rho g H S}{2}
 \frac{h_{1}}{h_{2}} = \frac{\rho_{2}}{\rho_{1}}
 F_{A} = \rho g V
 F_{2} = \frac{F_{1} S_{2}}{S_{1}}
@@ -86,8 +86,8 @@ C = c m
 Q_{n} = r m
 Q_{плавления} = \lambda m
 Q_{сгорания} = - q m
-A = p \delta V
-Q = \delta U + A
+A = p \Delta V
+Q = \Delta U + A
 \sum_{i=1}^n Q_{i} = 0
 \eta = \frac{A}{Q_{1}} = \frac{Q_{1} - Q_{2}}{Q_{1}}
 \eta = \frac{T_{1} - T_{2}}{t_{1}}
@@ -187,4 +187,5 @@ tab \ trigonometry \\
 
 azdatasplit
 
-Все \ формулы == =
+Все формулы == =
+
